@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulful Bestsellers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-left img {
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .navbar-icons {
+            display: flex;
+            gap: 25px;
+            margin-left: 80px;
+        }
+
+        .navbar-icons i {
+            font-size: 24px;
+            color: black;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .item {
+            position: relative;
+            text-align: center;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .item img:hover {
+            transform: scale(1.1);
+        }
+
+        .item-title {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .fixed-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            justify-content: space-between;
+        }
+
+        .scroll-item {
+            flex: 0 0 auto;
+            width: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            scroll-snap-align: start;
+        }
+
+        .scroll-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="images/logo.png" alt="Soulful Bestsellers">
+            <div class="navbar-links">
+                <a href="#bestsellers">TOPWEAR</a>
+                <a href="#categories">BOTTOMWEAR</a>
+                <a href="#themes">BESTSELLERS</a>
+                <a href="#special">SNEAKERS</a>
+                <a href="#collections">SPECIAL PRICES</a>
+                <a href="#accessories">COLLECTIONS</a>
+                <a href="#membership">ACCESSORIES</a>
+            </div>
+        </div>
+        <div class="navbar-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-user"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+    </div>
+    <div class="container" id="bestsellers">
+        <h2>SOULFUL BESTSELLERS</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="images/pic1.webp" alt="Bestseller 1">
+                <div class="item-title">TIS Originals: Stained Glass</div>
+            </div>
+            <div class="item">
+                <img src="images/pic2.webp" alt="Bestseller 2">
+                <div class="item-title">Gilmore Girls: Coffee Cups</div>
+            </div>
+            <div class="item">
+                <img src="images/pic3.webp" alt="Bestseller 3">
+                <div class="item-title">Soldier: Olive (Straight Fit)</div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="categories">
+        <h2>CATEGORIES</h2>
+        <div class="grid">
+            <div class="item">
+                <img src="images/pic1.webp" alt="Tops">
+                <div class="item-title">TOPS</div>
+            </div>
+            <div class="item">
+                <img src="images/pic2.webp" alt="Oversized T-Shirts">
+                <div class="item-title">OVERSIZED T-SHIRTS</div>
+            </div>
+            <div class="item">
+                <img src="images/pic3.webp" alt="Pants">
+                <div class="item-title">PANTS</div>
+            </div>
+            <div class="item">
+                <img src="images/pic4.webp" alt="Shirts">
+                <div class="item-title">SHIRTS</div>
+            </div>
+            <div class="item">
+                <img src="images/pic1.webp" alt="Sneakers">
+                <div class="item-title">SNEAKERS</div>
+            </div>
+            <div class="item">
+                <img src="images/pic2.webp" alt="Dresses">
+                <div class="item-title">DRESSES</div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="themes">
+        <h2>SHOP BY THEMES</h2>
+        <div class="scroll-container">
+            <div class="scroll-item"><img src="images/pic1.webp" alt="Theme 1">
+                <div class="item-title">TSS Originals</div>
+            </div>
+            <div class="scroll-item"><img src="images/pic2.webp" alt="Theme 2">
+                <div class="item-title">Hello Kitty</div>
+            </div>
+            <div class="scroll-item"><img src="images/pic3.webp" alt="Theme 3">
+                <div class="item-title">Garfield</div>
+            </div>
+            <div class="scroll-item"><img src="images/pic4.webp" alt="Theme 4">
+                <div class="item-title">Harry Potter</div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="why-choose-us">
+        <h2>WHY CHOOSE US?</h2>
+        <img src="images/image1.png" alt="Why Choose Us" class="fixed-image">
+    </div>
+    <div class="container" id="membership">
+        <h2>MEMBERSHIP PERKS</h2>
+        <img src="images/image2.png" alt="Membership Perks" class="fixed-image">
+    </div>
+</body>
+
+</html>
